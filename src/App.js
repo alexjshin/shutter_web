@@ -1,12 +1,16 @@
 import Skeleton from './components/skeleton.js';
 import Header from './components/header.js'
+import { ChakraProvider } from '@chakra-ui/react';
+import { Fragment } from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Skeleton />
-    </div>
+    <ChakraProvider>
+      <Fragment className="App">
+        <Header />
+        <Skeleton />
+      </Fragment>
+    </ChakraProvider>
   );
 }
 
