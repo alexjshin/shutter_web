@@ -2,7 +2,6 @@ import React, {useState, Fragment} from 'react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import {
     Button,
-    Text, 
     VStack, 
     Container, 
     Flex, 
@@ -16,6 +15,7 @@ import {
 import Skeleton from './skeletonjson';
 import SkeletonGIF from './skeletongif';
 import ConnectedSkeleton from './skeletonconnected';
+import CartesianVis from './CartesianVis';
 
 const visuals = ['skel_with_slider', 'skel_with_sidler_connected', 'skel_gif', 'cart_vis'];
 
@@ -34,7 +34,7 @@ function Visualization(){
             return <ConnectedSkeleton/>
         }
         else {
-            return <Text>something for now</Text>
+            return <CartesianVis/>
         }
     }
 
