@@ -6,13 +6,13 @@ function importAll(r) {
     return r.keys().map(key => r(key))
 }
 
-const jsonContext = require.context('./data/skeleton-json', false, /\.json$/);
+const jsonContext = require.context('./data/skeleton-connected', false, /\.json$/);
 
 // checking the console to make sure all the json files were imported properly
 console.log('jsonContext:', jsonContext.keys());
 const jsonData = importAll(jsonContext);
 
-function Skeleton(){
+function ConnectedSkeleton(){
     const [currentData, setCurrentData] = useState(jsonData[0])
     const [sliderValue, setSliderValue] = useState(0)
 
@@ -35,7 +35,8 @@ function Skeleton(){
                     to rotate the plot and view the skeleton from different persepctives. Furthermore, you can use the slider below 
                     to track the skeleton's movement over time. This visualization is specific to one time frame, where it tracks all 
                     the movement leading up to the moment the skeleton/interactor interacts with Shutter. This allows us to visualize how 
-                    Shutter sees people before they interact with it or Shutter interacts with them.
+                    Shutter sees people before they interact with it or Shutter interacts with them. (This visualization is the same as "Skeleton
+                    with Slider" except that the skeleton joints are connected with lines)
                 </Text></Fragment>
                 <Fragment>
                     <Heading as = "h3" size = "">Time Slider</Heading>
@@ -51,4 +52,4 @@ function Skeleton(){
     );
 }
 
-export default Skeleton;
+export default ConnectedSkeleton;
