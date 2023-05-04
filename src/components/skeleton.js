@@ -7,10 +7,16 @@ function importAll(r) {
     return r.keys().map(key => r(key))
 }
 
-const jsonData = importAll(require.context('./data', false, /\.json$/))
+// const jsonData = importAll(require.context('./data', false, /\.json$/))
+const jsonContext = require.context('./data', false, /.json$/);
+console.log('jsonContext:', jsonContext.keys());
+const jsonData = importAll(jsonContext);
 
 function Skeleton(){
     const [currentData, setCurrentData] = useState(jsonData[0])
+
+    console.log('jsonData', jsonData);
+    console.log('currentData', currentData);
 
     function handleSliderChange(event) {
         const index = event.target.value;
