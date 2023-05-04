@@ -1,4 +1,4 @@
-import Skeleton from './components/skeleton.js';
+import Visualization from './components/visualization.js';
 import Header from './components/header.js';
 import Summary from './components/summary.js';
 import { ChakraProvider } from '@chakra-ui/react';
@@ -11,7 +11,7 @@ function App() {
       <Fragment className="App">
         <Header />
         <Summary />
-        <Skeleton />
+        <Visualization />
       </Fragment>
     </ChakraProvider>
   );

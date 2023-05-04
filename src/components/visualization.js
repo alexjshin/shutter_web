@@ -13,7 +13,7 @@ const jsonContext = require.context('./data/skeleton-json', false, /\.json$/);
 console.log('jsonContext:', jsonContext.keys());
 const jsonData = importAll(jsonContext);
 
-function Skeleton(){
+function Visualization(){
     const [currentData, setCurrentData] = useState(jsonData[0])
 
     console.log('jsonData', jsonData);
@@ -47,4 +47,4 @@ function Skeleton(){
     );
 }
 
-export default Skeleton;
+export default Visualization;
