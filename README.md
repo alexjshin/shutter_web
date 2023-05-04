@@ -1,6 +1,7 @@
 # Shutter Data Visualization
 
-This project was created by: Alex Shin, Yale Interactive Machines Group
+This project was created by: Alex Shin
+Project Mentor: Sydney Thompson, Yale Interactive Machines Group
 
 ## To Run/View the Project
 
