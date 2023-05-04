@@ -8,7 +8,8 @@ function importAll(r) {
 }
 
 // const jsonData = importAll(require.context('./data', false, /\.json$/))
-const jsonContext = require.context('./data', false, /.json$/);
+const jsonContext = require.context('./data/skeleton-json', false, /\.json$/);
+// checking the console to make sure all the json files were imported properly
 console.log('jsonContext:', jsonContext.keys());
 const jsonData = importAll(jsonContext);
 
